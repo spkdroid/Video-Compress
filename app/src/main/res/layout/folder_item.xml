@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   android:orientation="vertical"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="150dp">
+
+    <TextView
+            android:text="Folder File Name Text"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:textSize="25dp"
+            android:id="@+id/filenameTextView"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="36dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/filepathTextView" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="14dp" android:layout_marginEnd="14dp"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fileSizeTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginStart="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/filenameTextView" android:layout_marginBottom="62dp"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/filepathTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginStart="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/filenameTextView" android:layout_marginBottom="34dp"
+            android:visibility="invisible"
+    />
+</androidx.constraintlayout.widget.ConstraintLayout>

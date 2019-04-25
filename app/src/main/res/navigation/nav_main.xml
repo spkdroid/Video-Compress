@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/nav_main"
+            app:startDestination="@id/splashFragment">
+
+    <fragment android:id="@+id/mainFragment" android:name="cm.dija.dp.videoeditor.page.PickFileFragment"
+              android:label="main_fragment" tools:layout="@layout/main_fragment">
+        <action android:id="@+id/action_mainFragment_to_videoTrimFragment" app:destination="@id/videoTrimFragment"/>
+    </fragment>
+    <fragment android:id="@+id/menuFragment" android:name="cm.dija.dp.videoeditor.MenuFragment"
+              android:label="menu_fragment" tools:layout="@layout/menu_fragment">
+        <action android:id="@+id/action_menuFragment_to_mainFragment" app:destination="@id/mainFragment"/>
+        <action android:id="@+id/action_menuFragment_to_mergeFragment" app:destination="@id/mergeFragment"/>
+        <action android:id="@+id/action_menuFragment_to_compressFragment" app:destination="@id/compressFragment"/>
+        <action android:id="@+id/action_menuFragment_to_folderFragment" app:destination="@id/folderFragment"/>
+    </fragment>
+    <fragment android:id="@+id/splashFragment" android:name="cm.dija.dp.videoeditor.page.SplashFragment"
+              android:label="splash_fragment" tools:layout="@layout/splash_fragment">
+        <action android:id="@+id/action_splashFragment_to_menuFragment" app:destination="@id/menuFragment"
+                app:launchSingleTop="true"
+                app:popUpTo="@id/splashFragment"
+                app:popUpToInclusive="true"
+        />
+    </fragment>
+    <fragment android:id="@+id/videoTrimFragment" android:name="cm.dija.dp.videoeditor.page.VideoTrimFragment"
+              android:label="video_trim_fragment" tools:layout="@layout/video_trim_fragment"/>
+    <fragment android:id="@+id/mergeFragment" android:name="cm.dija.dp.videoeditor.page.MergeFragment"
+              android:label="merge_fragment" tools:layout="@layout/merge_fragment"/>
+    <fragment android:id="@+id/compressFragment" android:name="cm.dija.dp.videoeditor.page.CompressFragment"
+              android:label="compress_fragment" tools:layout="@layout/compress_fragment"/>
+    <fragment android:id="@+id/folderFragment" android:name="cm.dija.dp.videoeditor.page.FolderFragment"
+              android:label="folder_fragment" tools:layout="@layout/folder_fragment"/>
+</navigation>

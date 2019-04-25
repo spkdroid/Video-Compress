@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Mp4 Editor</string>
+    <string name="mergetitleMessage">Filename Required</string>
+    <string name="mergebodyMessage">Please enter a filename</string>
+    <string name="agree">Agree</string>
+    <string name="disagree">Disagree</string>
+</resources>
