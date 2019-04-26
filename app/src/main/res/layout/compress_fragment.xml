@@ -73,7 +73,7 @@
             android:layout_marginStart="26dp" android:layout_marginEnd="16dp"
     />
     <TextView
-            android:text="Video Quality"
+            android:text="Video Quality (Lower the value higher quality)"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/videoQualityTextView"
@@ -142,11 +142,11 @@
             android:layout_marginTop="174dp" app:layout_constraintTop_toBottomOf="@+id/videoQualitySeekBar"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginBottom="106dp"
             app:layout_constraintBottom_toTopOf="@+id/videocompressButton">
-
         <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Exported Filename" android:id="@+id/exportCompressInputText"/>
+                android:hint="Exported Filename"
+                android:id="@+id/exportCompressInputText"/>
     </com.google.android.material.textfield.TextInputLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
