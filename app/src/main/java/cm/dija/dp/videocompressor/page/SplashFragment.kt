@@ -64,7 +64,7 @@ class SplashFragment : Fragment() {
         }
 
         Observable.fromCallable {
-          //  VideoRepository.getVideoList(this.activity!!)
+            VideoRepository.getVideoList(this.activity!!)
             false
         }.delay(5, TimeUnit.SECONDS)
             .subscribeOn(Schedulers.io())
