@@ -1,12 +1,15 @@
 package cm.dija.dp.videocompressor.page
 
 import android.Manifest
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.os.Environment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.Navigation
@@ -50,7 +53,13 @@ class SplashFragment : Fragment() {
                 if (granted) { // Always true pre-M
                     GenerateVideoRepository()
                 } else {
-                    Toast.makeText(context, "Permission Not Granted", Toast.LENGTH_LONG).show()
+
+                    AlertDialog.Builder(this.context!!)
+                        .setIcon(R.drawable.ic_launcher)
+                        .setTitle("Warning")
+                        .setMessage("Video Compress application require storage premission to run the application, Please restart the application")
+                        .setPositiveButton("Exit") { dialog, which -> System.exit(0) }
+                        .show()
                 }
             }
     }
