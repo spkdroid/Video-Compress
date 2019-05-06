@@ -38,14 +38,14 @@ class MainActivity : AppCompatActivity() {
                         startActivity(
                             Intent(
                                 Intent.ACTION_VIEW,
-                                Uri.parse("market://details?id=cm.dija.dp.videoeditor")
+                                Uri.parse("market://details?id=cm.dija.dp.videocompressor")
                             )
                         )
                     } catch (anfe: android.content.ActivityNotFoundException) {
                         startActivity(
                             Intent(
                                 Intent.ACTION_VIEW,
-                                Uri.parse("http://play.google.com/store/apps/details?id=cm.dija.dp.videoeditor")
+                                Uri.parse("http://play.google.com/store/apps/details?id=cm.dija.dp.videocompressor")
                             )
                         )
                     }

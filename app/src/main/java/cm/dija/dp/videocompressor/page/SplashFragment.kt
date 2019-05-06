@@ -57,7 +57,7 @@ class SplashFragment : Fragment() {
                     AlertDialog.Builder(this.context!!)
                         .setIcon(R.drawable.ic_launcher)
                         .setTitle("Warning")
-                        .setMessage("Video Compress application require storage premission to run the application, Please restart the application")
+                        .setMessage("Video Compress application require storage permission to run the application, Please restart the application")
                         .setPositiveButton("Exit") { dialog, which -> System.exit(0) }
                         .show()
                 }

@@ -134,7 +134,7 @@ class FfmpegServiceImpl : FfmpegService {
         var progressDialog = ProgressDialog(ctx)
         progressDialog.setIcon(cm.dija.dp.videocompressor.R.drawable.export_video)
         progressDialog.setCancelable(false)
-        progressDialog.setTitle("Mp4 Editor Started")
+        progressDialog.setTitle("ZX Video Compress started")
 
 
         try {
