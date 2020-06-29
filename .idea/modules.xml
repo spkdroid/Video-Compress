@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Video-Compress.iml" filepath="$PROJECT_DIR$/Video-Compress.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Video-Compress.iml" filepath="$PROJECT_DIR$/Video-Compress.iml" group="Video-Compress" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="Video-Compress/app" />
     </modules>
   </component>
 </project>
