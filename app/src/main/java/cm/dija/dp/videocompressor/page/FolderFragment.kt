@@ -60,7 +60,6 @@ class FolderFragment : Fragment() {
     }
 
     private fun getVideoFile(): ArrayList<FolderVideoHolder> {
-
         val directory = File(Environment.getExternalStorageDirectory().toString() + "/ZXVideoCompress/")
 
         val files = directory.listFiles()
@@ -80,5 +79,4 @@ class FolderFragment : Fragment() {
     private fun getFileSize(file: File?): String {
         return (file!!.length() / (1024 * 1024)).toString() + " MB"
     }
-
 }
