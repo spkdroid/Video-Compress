@@ -2,10 +2,14 @@
   <library name="Gradle: androidx.fragment:fragment:1.1.0-alpha06@aar">
     <ANNOTATIONS>
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a4027a269c2c212d5708389c26f868b9/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2790540c378db0b14365c8144e151de8/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a4027a269c2c212d5708389c26f868b9/res" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a4027a269c2c212d5708389c26f868b9/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2790540c378db0b14365c8144e151de8/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2790540c378db0b14365c8144e151de8/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2790540c378db0b14365c8144e151de8/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

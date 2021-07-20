@@ -11,27 +11,4 @@
     </style>
 
 
-    <style name="Widget.Design.TextInputLayout" parent="AppTheme">
-        <item name="counterTextAppearance">@style/TextAppearance.Design.Counter</item>
-        <item name="counterOverflowTextAppearance">@style/TextAppearance.Design.Counter.Overflow</item>
-        <item name="colorControlNormal">#2196F3</item>
-        <item name="colorControlActivated">#000000</item>
-        <item name="android:textSize">16dp</item>
-    </style>
-
-    <style name="AppTheme.TextFloatLabelAppearance" parent="TextAppearance.Design.Hint">
-        <!-- Floating label appearance here -->
-        <item name="android:textColor">@color/colorPrimary</item>
-        <item name="android:textSize">10sp</item>
-        <item name="android:background">#000000</item>
-        <item name="colorControlNormal">#2196F3</item>
-        <item name="colorControlActivated">#000000</item>
-    </style>
-
-    <style name="AppTheme.TextErrorAppearance" parent="TextAppearance.Design.Error">
-        <!-- Error message appearance here -->
-        <item name="android:textColor">#ff0000</item>
-        <item name="android:textSize">20sp</item>
-    </style>
-
 </resources>

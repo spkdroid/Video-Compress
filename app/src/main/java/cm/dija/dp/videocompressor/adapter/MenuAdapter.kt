@@ -10,7 +10,7 @@ import cm.dija.dp.videocompressor.R
 import cm.dija.dp.videocompressor.data.MenuItem
 import kotlinx.android.synthetic.main.menu_item.view.*
 
-class MenuAdapter(val items: ArrayList<MenuItem>, val context: Context) : RecyclerView.Adapter<MenuViewHolder>() {
+class MenuAdapter(private val items: ArrayList<MenuItem>, val context: Context) : RecyclerView.Adapter<MenuViewHolder>() {
 
     override fun getItemCount(): Int {
         return items.size

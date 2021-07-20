@@ -27,9 +27,9 @@ class MenuFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        menuItems.clear()
-        menuItems.add(MenuItem("Compress Video",resources.getDrawable(R.drawable.compress_video)))
-        menuItems.add(MenuItem("Exported Video", resources.getDrawable(R.drawable.export_video)))
+        //menuItems.clear()
+       // menuItems.add(MenuItem("Compress Video",resources.getDrawable(R.drawable.compress_video)))
+       // menuItems.add(MenuItem("Exported Video", resources.getDrawable(R.drawable.export_video)))
     }
 
 
@@ -37,8 +37,7 @@ class MenuFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val v =  inflater.inflate(R.layout.menu_fragment, container, false)
-        return v
+       return  inflater.inflate(R.layout.menu_fragment, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -48,7 +47,6 @@ class MenuFragment : Fragment() {
     }
 
     private fun MenuItems() {
-
         val menuAdapter = MenuAdapter(menuItems, this.context!!)
         val llm = LinearLayoutManager(this.context)
         recyclerView.layoutManager = llm

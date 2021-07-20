@@ -8,7 +8,7 @@ import cm.dija.dp.videocompressor.R
 import cm.dija.dp.videocompressor.data.FolderVideoHolder
 import kotlinx.android.synthetic.main.folder_item.view.*
 
-class FolderAdapter(val items: ArrayList<FolderVideoHolder>, val context: Context) : RecyclerView.Adapter<FolderView>() {
+class FolderAdapter(private val items: ArrayList<FolderVideoHolder>, val context: Context) : RecyclerView.Adapter<FolderView>() {
 
     override fun getItemCount(): Int {
         return items.size

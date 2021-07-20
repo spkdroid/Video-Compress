@@ -8,33 +8,35 @@ import android.provider.MediaStore
 import cm.dija.dp.videocompressor.data.Video
 
 object VideoRepository {
-
     var CardScan: Boolean = false
         private set
 
     var videoList: ArrayList<Video> = ArrayList()
 
     fun getVideoList(activity: Activity): ArrayList<Video> {
-
         if (!CardScan) {
 
-            var thumbCols = arrayOf(MediaStore.Video.Thumbnails.DATA, MediaStore.Video.Thumbnails.VIDEO_ID)
+            val thumbCols =
+                arrayOf(MediaStore.Video.Thumbnails.DATA, MediaStore.Video.Thumbnails.VIDEO_ID)
 
-            var videoCols = arrayOf(
+            val videoCols = arrayOf(
                 MediaStore.Video.Media._ID,
                 MediaStore.Video.Media.DATA,
                 MediaStore.Video.Media.TITLE,
                 MediaStore.Video.Media.MIME_TYPE
             )
 
+            val cursor: Cursor =
+                activity.contentResolver.query(
+                    MediaStore.Video.Media.EXTERNAL_CONTENT_URI,
+                    videoCols,
+                    null,
+                    null,
+                    null
+                )
 
-            var cursor: Cursor =
-                activity.contentResolver.query(MediaStore.Video.Media.EXTERNAL_CONTENT_URI, videoCols, null, null, null)
-
-            if (cursor != null && cursor.moveToFirst()) {
-
+            if (cursor.moveToFirst()) {
                 do {
-
                     var thumbnailPath = ""
                     val id = cursor.getInt(cursor.getColumnIndex(MediaStore.Video.Media._ID))
                     val thumbCursor = activity.contentResolver.query(
@@ -44,21 +46,20 @@ object VideoRepository {
                         null,
                         null
                     )
-
                     if (thumbCursor.moveToFirst()) {
                         thumbnailPath =
-                                thumbCursor.getString(thumbCursor.getColumnIndex(MediaStore.Video.Thumbnails.DATA))
+                            thumbCursor.getString(thumbCursor.getColumnIndex(MediaStore.Video.Thumbnails.DATA))
                     }
 
-                    var videoPath: String = cursor.getString(
+                    val videoPath: String = cursor.getString(
                         cursor
                             .getColumnIndex(MediaStore.Video.Media.DATA)
                     )
-                    var title: String = cursor.getString(
+                    val title: String = cursor.getString(
                         cursor
                             .getColumnIndex(MediaStore.Video.Media.TITLE)
                     )
-                    var mimetype: String = cursor.getString(
+                    val mimetype: String = cursor.getString(
                         cursor
                             .getColumnIndex(MediaStore.Video.Media.MIME_TYPE)
                     )
@@ -66,16 +67,26 @@ object VideoRepository {
                     val metadataRetriever = MediaMetadataRetriever()
                     try {
                         metadataRetriever.setDataSource(videoPath)
-                        val duration = metadataRetriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_DURATION)
+                        val duration =
+                            metadataRetriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_DURATION)
                         val time = java.lang.Long.valueOf(duration) / 2
-                        val bitmap = metadataRetriever.getFrameAtTime(time, MediaMetadataRetriever.OPTION_NEXT_SYNC)
+                        val bitmap = metadataRetriever.getFrameAtTime(
+                            time,
+                            MediaMetadataRetriever.OPTION_NEXT_SYNC
+                        )
                         var resizedBitmap = Bitmap.createScaledBitmap(bitmap, 750, 500, true)
-                        videoList.add(Video(thumbnailPath, videoPath, title, mimetype, resizedBitmap))
+                        videoList.add(
+                            Video(
+                                thumbnailPath,
+                                videoPath,
+                                title,
+                                mimetype,
+                                resizedBitmap
+                            )
+                        )
                     } catch (ex: Exception) {
                     }
-
                 } while (cursor.moveToNext())
-
             }
             CardScan = true
             return videoList

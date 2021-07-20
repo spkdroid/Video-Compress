@@ -61,13 +61,13 @@ class CompressFragment : Fragment(), SeekBar.OnSeekBarChangeListener {
 
             val selectedId: String
 
-            var a = videoSpeed.checkedRadioButtonId
+            val a = videoSpeed.checkedRadioButtonId
 
-            when (a) {
-                radioSlow.id -> selectedId = "slow"
-                radioFast.id -> selectedId = "fast"
-                radioVeryFast.id -> selectedId = "veryfast"
-                else -> selectedId = "ultrafast"
+            selectedId = when (a) {
+                radioSlow.id -> "slow"
+                radioFast.id -> "fast"
+                radioVeryFast.id -> "veryfast"
+                else -> "ultrafast"
             }
 
 
@@ -94,9 +94,7 @@ class CompressFragment : Fragment(), SeekBar.OnSeekBarChangeListener {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         if (resultCode == Activity.RESULT_OK) {
             if (requestCode == 1) {
-
                 VideoRepository.videoList.forEach {
-
                     if (getPath(data!!.data).equals(it.thumbnailPath)) {
                         videocompressEditText.setText(it.thumbnailPath)
                         videoCompressResultText.text = getVideoSize(it.thumbnailPath)
@@ -118,9 +116,9 @@ class CompressFragment : Fragment(), SeekBar.OnSeekBarChangeListener {
         val cursor = context!!.contentResolver.query(uri, projection, null, null, null)
 
         return if (cursor != null) {
-            val column_index = cursor.getColumnIndexOrThrow(MediaStore.Video.Media.DATA)
+            val columnData = cursor.getColumnIndexOrThrow(MediaStore.Video.Media.DATA)
             cursor.moveToFirst()
-            cursor.getString(column_index)
+            cursor.getString(columnData)
         } else
             null
     }

@@ -2,7 +2,6 @@ package cm.dija.dp.videocompressor.data
 
 import android.graphics.Bitmap
 
-
 data class Video(
     val videoPath: String,
     val thumbnailPath: String,

@@ -22,9 +22,7 @@ class FfmpegServiceImpl : FfmpegService {
         endIndex: String,
         exportedFileName: String
     ) {
-
-
-        var outputPath =
+        val outputPath =
             Environment.getExternalStorageDirectory().path + "/" + "Mp4Editor" + "/" + exportedFileName + ".mp4"
         val args = arrayOf("-y", "-i", filePath, "-ss", startIndex, "-to", endIndex, outputPath)
 
@@ -35,7 +33,7 @@ class FfmpegServiceImpl : FfmpegService {
 
     override fun compressVideoFile(ctx:Context,filePath: String,exportedFileName: String,videoQuality:String,videoEncodeSpeed:String)
     {
-        var outputPath = Environment.getExternalStorageDirectory().path + "/" + "ZXVideoCompress" + "/" + exportedFileName + ".mp4"
+        val outputPath = Environment.getExternalStorageDirectory().path + "/" + "ZXVideoCompress" + "/" + exportedFileName + ".mp4"
         val args = arrayOf( "-i",filePath,"-crf",videoQuality,"-preset",videoEncodeSpeed,"-b:a","96k",outputPath)
         ffmpegExecute(ctx, args, outputPath)
     }
@@ -118,7 +116,7 @@ class FfmpegServiceImpl : FfmpegService {
             file.mkdirs()
         }
 
-        var ffmpegCommand = ProcessRepository.ffmpegInstance(ctx)
+        val ffmpegCommand = ProcessRepository.ffmpegInstance(ctx)
 
         try {
             ffmpegCommand.loadBinary(object : LoadBinaryResponseHandler() {
@@ -130,8 +128,7 @@ class FfmpegServiceImpl : FfmpegService {
             showUnsupportedExceptionDialog(ctx)
         }
 
-
-        var progressDialog = ProgressDialog(ctx)
+        val progressDialog = ProgressDialog(ctx)
         progressDialog.setIcon(cm.dija.dp.videocompressor.R.drawable.export_video)
         progressDialog.setCancelable(false)
         progressDialog.setTitle("ZX Video Compress started")
@@ -139,7 +136,6 @@ class FfmpegServiceImpl : FfmpegService {
 
         try {
             ffmpegCommand.execute(args, object : ExecuteBinaryResponseHandler() {
-
                 override fun onFailure(s: String?) {
                     val builder = AlertDialog.Builder(ctx)
                     builder.setTitle("Failed")
