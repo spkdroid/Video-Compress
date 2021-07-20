@@ -1,11 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.tbruyelle:rxpermissions:0.10.2@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1a0f02e8b97328d1945b56faedcfb19e/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1a0f02e8b97328d1945b56faedcfb19e/jars/classes.jar!/" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b4017642cf38cbc6a1666b1d842add4f/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b4017642cf38cbc6a1666b1d842add4f/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b4017642cf38cbc6a1666b1d842add4f/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/84306a2b3eb17ae50140070dd6ec81ac/jetified-rxpermissions-0.10.2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/95403dfb1a6ccd1216249042d5f1d4f8/jetified-rxpermissions-0.10.2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7b00b27e53e7541d6e8e2309517b2b2e/jetified-rxpermissions-0.10.2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/25c9e7e7fd6e0e2ed9247ea64c7e9168/jetified-rxpermissions-0.10.2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/25c9e7e7fd6e0e2ed9247ea64c7e9168/jetified-rxpermissions-0.10.2/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/25c9e7e7fd6e0e2ed9247ea64c7e9168/jetified-rxpermissions-0.10.2/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

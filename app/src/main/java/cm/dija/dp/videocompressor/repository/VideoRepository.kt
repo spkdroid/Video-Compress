@@ -32,7 +32,7 @@ object VideoRepository {
                     null,
                     null,
                     null
-                )
+                )!!
 
             if (cursor.moveToFirst()) {
                 do {
@@ -45,7 +45,7 @@ object VideoRepository {
                         null,
                         null
                     )
-                    if (thumbCursor.moveToFirst()) {
+                    if (thumbCursor!!.moveToFirst()) {
                         thumbnailPath =
                             thumbCursor.getString(thumbCursor.getColumnIndex(MediaStore.Video.Thumbnails.DATA))
                     }
@@ -73,7 +73,7 @@ object VideoRepository {
                             time,
                             MediaMetadataRetriever.OPTION_NEXT_SYNC
                         )
-                        var resizedBitmap = Bitmap.createScaledBitmap(bitmap, 750, 500, true)
+                        var resizedBitmap = Bitmap.createScaledBitmap(bitmap!!, 750, 500, true)
                         videoList.add(
                             Video(
                                 thumbnailPath,

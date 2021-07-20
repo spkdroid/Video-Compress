@@ -1,15 +1,15 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.swiperefreshlayout:swiperefreshlayout:1.0.0@aar">
     <ANNOTATIONS>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/cfdd04ff271bf3738cd68b25d7dfbabb/annotations.zip!/" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/84da564ed18db8d297846809b8c5c8b4/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4c402b822b8b50ac41d543b09ce5b564/swiperefreshlayout-1.0.0/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/cfdd04ff271bf3738cd68b25d7dfbabb/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/cfdd04ff271bf3738cd68b25d7dfbabb/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/84da564ed18db8d297846809b8c5c8b4/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/84da564ed18db8d297846809b8c5c8b4/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/84da564ed18db8d297846809b8c5c8b4/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c4bbc4c005321ac8d9160c1cda64ee0a/swiperefreshlayout-1.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c90dbba4018627692aee2b5bf8eba807/swiperefreshlayout-1.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/21f96a2bf0192f7cad5f62a20992db79/swiperefreshlayout-1.0.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4c402b822b8b50ac41d543b09ce5b564/swiperefreshlayout-1.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4c402b822b8b50ac41d543b09ce5b564/swiperefreshlayout-1.0.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4c402b822b8b50ac41d543b09ce5b564/swiperefreshlayout-1.0.0/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

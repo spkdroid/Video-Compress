@@ -74,7 +74,7 @@ class CompressFragment : Fragment(), SeekBar.OnSeekBarChangeListener {
             if (exportCompressInputText.text!!.isNotEmpty()) {
                 if (videocompressEditText.text.isNotEmpty())
                     ffmpegService.compressVideoFile(
-                        this.context!!,
+                        requireContext(),
                         videocompressEditText.text.toString(),
                         exportCompressInputText.text.toString(),
                         qualityTextView.text.toString(),
@@ -95,7 +95,7 @@ class CompressFragment : Fragment(), SeekBar.OnSeekBarChangeListener {
         if (resultCode == Activity.RESULT_OK) {
             if (requestCode == 1) {
                 VideoRepository.videoList.forEach {
-                    if (getPath(data!!.data).equals(it.thumbnailPath)) {
+                    if (getPath(data!!.data!!).equals(it.thumbnailPath)) {
                         videocompressEditText.setText(it.thumbnailPath)
                         videoCompressResultText.text = getVideoSize(it.thumbnailPath)
                     }
@@ -113,7 +113,7 @@ class CompressFragment : Fragment(), SeekBar.OnSeekBarChangeListener {
 
     fun getPath(uri: Uri): String? {
         val projection = arrayOf(MediaStore.Images.Media.DATA)
-        val cursor = context!!.contentResolver.query(uri, projection, null, null, null)
+        val cursor = requireContext().contentResolver.query(uri, projection, null, null, null)
 
         return if (cursor != null) {
             val columnData = cursor.getColumnIndexOrThrow(MediaStore.Video.Media.DATA)
