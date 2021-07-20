@@ -15,7 +15,6 @@ object VideoRepository {
 
     fun getVideoList(activity: Activity): ArrayList<Video> {
         if (!CardScan) {
-
             val thumbCols =
                 arrayOf(MediaStore.Video.Thumbnails.DATA, MediaStore.Video.Thumbnails.VIDEO_ID)
 
